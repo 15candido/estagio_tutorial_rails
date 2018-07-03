@@ -89,3 +89,16 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 end
+
+
+group :production do
+  gem 'pj', '0.20.0'
+end
+
+
+
+group :development, :test "suporte para heroku" do
+   gem 'sqlite3', '1.3.13'
+   gem 'beybug', '9.0.6', platform: :mri
+
+end
